@@ -1,0 +1,262 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: #F8FAFC;
+    color: #1E293B;
+}
+
+/* ===== EN-TÊTE ===== */
+header {
+    background: white;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 800;
+    color: #1E293B;
+}
+
+.logo span {
+    color: #3B82F6;
+}
+
+.panier {
+    background: #3B82F6;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.panier:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+}
+
+.panier span {
+    background: white;
+    color: #3B82F6;
+    padding: 0 10px;
+    border-radius: 30px;
+}
+
+/* ===== BANNIÈRE ===== */
+.banniere {
+    background: linear-gradient(135deg, #3B82F6, #93C5FD);
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.banniere h1 {
+    font-size: 36px;
+}
+
+.banniere h1 span {
+    color: #FCD34D;
+}
+
+.banniere p {
+    opacity: 0.9;
+    margin-top: 8px;
+}
+
+/* ===== PRODUITS ===== */
+#produits {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+#produits h2 {
+    font-size: 28px;
+    margin-bottom: 25px;
+    color: #1E293B;
+}
+
+.grille {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+/* ===== CARTE PRODUIT ===== */
+.carte-produit {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+}
+
+.carte-produit:hover {
+    transform: translateY(-5px);
+}
+
+.carte-produit img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    background: #E2E8F0;
+}
+
+.carte-produit .infos {
+    padding: 15px;
+}
+
+.carte-produit h3 {
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.carte-produit .prix {
+    font-size: 20px;
+    font-weight: 800;
+    color: #3B82F6;
+    margin: 6px 0;
+}
+
+.carte-produit .statut {
+    font-size: 12px;
+    font-weight: 600;
+    padding: 2px 12px;
+    border-radius: 30px;
+    display: inline-block;
+}
+
+.statut.disponible {
+    background: #D1FAE5;
+    color: #065F46;
+}
+
+.statut.indisponible {
+    background: #FEE2E2;
+    color: #991B1B;
+}
+
+.btn-ajouter {
+    background: #2DD4BF;
+    color: #1E293B;
+    border: none;
+    padding: 10px 0;
+    border-radius: 50px;
+    font-weight: 700;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 8px;
+    transition: all 0.3s;
+}
+
+.btn-ajouter:hover {
+    transform: scale(1.02);
+}
+
+.btn-ajouter:disabled {
+    background: #E2E8F0;
+    color: #94A3B8;
+    cursor: not-allowed;
+}
+
+/* ===== MODALE PANIER ===== */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal.ouvert {
+    display: flex;
+}
+
+.modal-contenu {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    max-width: 450px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.fermer {
+    float: right;
+    font-size: 28px;
+    cursor: pointer;
+    color: #94A3B8;
+}
+
+.fermer:hover {
+    color: #1E293B;
+}
+
+.item-panier {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #E2E8F0;
+}
+
+.btn-commander {
+    background: #3B82F6;
+    color: white;
+    border: none;
+    padding: 12px 0;
+    border-radius: 50px;
+    font-weight: 700;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 15px;
+    font-size: 16px;
+    transition: all 0.3s;
+}
+
+.btn-commander:hover {
+    background: #2563EB;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background: #1E293B;
+    color: rgba(255,255,255,0.6);
+    text-align: center;
+    padding: 20px;
+    font-size: 13px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
+    header {
+        padding: 12px 20px;
+    }
+    .grille {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 400px) {
+    .grille {
+        grid-template-columns: 1fr;
+    }
+}

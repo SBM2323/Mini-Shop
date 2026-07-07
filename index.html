@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ===== EN-TÊTE ===== -->
+    <header>
+        <div class="logo">🛍️ Mini <span>Shop</span></div>
+        <div class="panier" onclick="ouvrirPanier()">
+            🛒 <span id="compteur-panier">0</span>
+        </div>
+    </header>
+
+    <!-- ===== BANNIÈRE ===== -->
+    <section class="banniere">
+        <h1>Bienvenue chez <span>Mini Shop</span></h1>
+        <p>Les meilleurs produits au meilleur prix</p>
+    </section>
+
+    <!-- ===== PRODUITS ===== -->
+    <section id="produits">
+        <h2>Nos produits</h2>
+        <div class="grille" id="grille-produits">
+            <!-- Les produits seront chargés ici -->
+        </div>
+    </section>
+
+    <!-- ===== PIED DE PAGE ===== -->
+    <footer>
+        <p>&copy; 2025 Mini Shop - Tous droits réservés</p>
+    </footer>
+
+    <!-- ===== MODALE PANIER ===== -->
+    <div id="modal-panier" class="modal">
+        <div class="modal-contenu">
+            <span class="fermer" onclick="fermerPanier()">&times;</span>
+            <h2>🛒 Votre panier</h2>
+            <div id="liste-panier">
+                <p>Votre panier est vide.</p>
+            </div>
+            <div id="total-panier">Total : 0.00 TND</div>
+            <button class="btn-commander" onclick="validerPanier()">📦 Valider la commande</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
