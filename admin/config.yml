@@ -1,9 +1,7 @@
 backend:
-  name: git-gateway
+  name: test-repo
+  repo: SBM2323/mini-shop
   branch: main
-
-media_folder: images/uploads
-public_folder: /images/uploads
 
 collections:
   - name: produits
@@ -12,6 +10,4 @@ collections:
     create: true
     fields:
       - { name: nom, label: Nom, widget: string }
-      - { name: prix, label: Prix, widget: number, default: 0 }
-      - { name: disponible, label: Disponible, widget: boolean, default: true }
-      - { name: image, label: Image, widget: image, required: false }
+      - { name: prix, label: Prix, widget: number }
